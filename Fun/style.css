@@ -137,6 +137,7 @@ footer {
         border: none;
         left: 80vw;
         position: relative;
+        padding-right: 2rem;
     }
 
     .navbar {

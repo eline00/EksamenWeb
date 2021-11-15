@@ -63,6 +63,10 @@ main p {
     font-size: 20px;
 }
 
+main p a {
+    color: white;
+}
+
 footer {
     display: block;
     background-color: rgb(255, 217, 0);
@@ -137,6 +141,7 @@ footer {
         border: none;
         left: 80vw;
         position: relative;
+        padding-right: 2rem;
     }
 
     .navbar {
