@@ -20,7 +20,6 @@ body {
     width: 100%;
     background-color: transparent;
     z-index: 1; /* Puts navbar over other elements to avoid overlap */
-
 }
 
 .navbar .language {
@@ -38,7 +37,6 @@ body {
 }
 
 .yellowLogo img {
-    position: relative;
     height: 20vh;
     padding: 20px;
 }

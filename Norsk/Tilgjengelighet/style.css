@@ -16,9 +16,10 @@ body {
     position: relative;
     align-items: center;
     width: 100%;
-    height: 20vh;
+    margin: 0;
     background: url(/Images/homepagepic.png) rgba(0, 0, 0, 0.541);
     background-blend-mode: multiply;
+    z-index: 1; /* Puts navbar over other elements to avoid overlap */
 }
 
 .navbar .language {
@@ -27,6 +28,7 @@ body {
     padding-right: 1rem;
     padding-left: 1rem;
     font-size: 20px;
+    list-style: none;
 }
 
 .navbar .language a {

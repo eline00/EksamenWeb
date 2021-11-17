@@ -16,9 +16,10 @@ body {
     position: relative;
     align-items: center;
     width: 100%;
-    height: 20vh;
+    margin: 0;
     background: url(/Images/homepagepic.png) rgba(0, 0, 0, 0.541);
     background-blend-mode: multiply;
+    z-index: 1; /* Puts navbar over other elements to avoid overlap */
 }
 
 .navbar .language {
@@ -27,6 +28,7 @@ body {
     padding-right: 1rem;
     padding-left: 1rem;
     font-size: 20px;
+    list-style: none;
 }
 
 .navbar .language a {
@@ -96,19 +98,27 @@ img.universal {
     border-radius: 10px;
 }
 
-@media only screen and (max-width: 600px) {
+/* Media screens smaller than 600px */
+@media only screen and (max-width:600px) {
     .navbar .dropdown .button {
         background-color: transparent;
-        color: rgb(255, 217, 0);
         cursor: pointer;
-        font-size: 20px;
         border: none;
-        left: 80vw;
         position: relative;
     }
 
+    .button img {
+        height: 50px;
+    }
+
     .navbar {
+        display: flex;
         justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar .language {
+        position: relative;
     }
 
     .nav-menu {
@@ -116,20 +126,20 @@ img.universal {
     }
 
     .navbar .dropdown {
-        position: absolute;
+        position: relative;
+        margin-left: auto;
     }
 
     .navbar .drop-menu {
         display: none;
         position: absolute;
-        left: 79vw;
-        z-index: 1;
+        
     }
 
     .navbar .drop-menu a {
         color: white;
-        padding: 12px 16px;
         text-decoration: none;
+        padding: 12px 16px;
         display: block;
     }
 
@@ -138,21 +148,28 @@ img.universal {
     }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 900px) {
-
+/* Media screens between 600px and 900px */
+@media only screen and (max-width:900px) and (min-width:600px) { 
     .navbar .dropdown .button {
         background-color: transparent;
-        color: rgb(255, 217, 0);
         cursor: pointer;
-        font-size: 20px;
         border: none;
-        left: 80vw;
         position: relative;
-        padding-right: 2rem;
+    }
+
+    .button img {
+        height: 50px;
     }
 
     .navbar {
+        display: flex;
         justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .navbar .language {
+        position: relative;
     }
 
     .nav-menu {
@@ -160,27 +177,27 @@ img.universal {
     }
 
     .navbar .dropdown {
-        position: absolute;
+        position: relative;
+        margin-left: auto;
     }
 
     .navbar .drop-menu {
         display: none;
         position: absolute;
-        left: 79vw;
-        z-index: 1;
+        
     }
 
     .navbar .drop-menu a {
         color: white;
-        padding: 12px 16px;
         text-decoration: none;
+        padding: 12px 16px;
         display: block;
     }
 
     .navbar .dropdown:hover .drop-menu {
         display: block;
     }
-} 
+}
 
 @media only screen and (min-width: 901px) {
     .button {

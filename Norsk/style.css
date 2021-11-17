@@ -4,6 +4,10 @@
      box-sizing: border-box; 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Roboto, sans-serif;
     font-size: 14px;
@@ -12,13 +16,10 @@ body {
 }
 
 .navbar {
-    display: flex;
     position: absolute;
     width: 100%;
-    height: 20;
     background-color: transparent;
-    align-items: center;
-
+    z-index: 1; /* Puts navbar over other elements to avoid overlap */
 }
 
 .navbar .language {
@@ -27,6 +28,7 @@ body {
     padding-right: 1rem;
     padding-left: 1rem;
     font-size: 20px;
+    list-style: none;
 }
 
 .navbar .language a {
@@ -42,13 +44,12 @@ body {
 header {
     background: url(/Images/homepagepic.png) rgba(0, 0, 0, 0.541);
     background-blend-mode: multiply; /* Blends the background image with the background color */
-    background-position: fixed;
+    background-position: center center;
     background-size: cover;
-    width: 100%;
-    height: 80vh; 
+    max-width: 100%;
+    height: 100vh; 
     display: block;
     position: relative;
-    z-index: -1; /* Puts background behind the other elements, to avoid overlap */
 }
 
 header div {
@@ -56,6 +57,7 @@ header div {
     text-align: center;
     top: 8rem;
     padding: 6rem;
+
 }
 
 header h1{
@@ -72,7 +74,32 @@ header p{
     color: rgb(255, 217, 0);
     font-size: 25px;
     text-align: left;
+    white-space: nowrap;
 }
+
+header .links{
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    width: 15%;
+    align-items: center;
+    padding-left: 0;
+    top: 30rem;
+    left: 6rem;
+}
+
+header .links .viewMore {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+}
+
+header .links .pil {
+    background-color: rgb(255, 217, 0);
+}
+
 
 main {
     display: block;
@@ -139,16 +166,24 @@ footer {
 @media only screen and (max-width:600px) {
     .navbar .dropdown .button {
         background-color: transparent;
-        color: rgb(255, 217, 0);
         cursor: pointer;
-        font-size: 20px;
         border: none;
-        left: 80vw;
         position: relative;
     }
 
+    .button img {
+        height: 50px;
+    }
+
     .navbar {
+        display: flex;
         justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar .language {
+        position: relative;
+        margin-left: auto;
     }
 
     .nav-menu {
@@ -156,20 +191,20 @@ footer {
     }
 
     .navbar .dropdown {
-        position: absolute;
+        position: relative;
+        margin-left: auto;
     }
 
     .navbar .drop-menu {
         display: none;
         position: absolute;
-        left: 79vw;
-        z-index: 1;
+        
     }
 
     .navbar .drop-menu a {
         color: white;
-        padding: 12px 16px;
         text-decoration: none;
+        padding: 12px 16px;
         display: block;
     }
 
@@ -180,19 +215,26 @@ footer {
 
 /* Media screens between 600px and 900px */
 @media only screen and (max-width:900px) and (min-width:600px) { 
-    
     .navbar .dropdown .button {
         background-color: transparent;
-        color: rgb(255, 217, 0);
         cursor: pointer;
-        font-size: 20px;
         border: none;
-        left: 80vw;
         position: relative;
     }
 
+    .button img {
+        height: 50px;
+    }
+
     .navbar {
+        display: flex;
         justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .navbar .language {
+        position: relative;
     }
 
     .nav-menu {
@@ -200,20 +242,20 @@ footer {
     }
 
     .navbar .dropdown {
-        position: absolute;
+        position: relative;
+        margin-left: auto;
     }
 
     .navbar .drop-menu {
         display: none;
         position: absolute;
-        left: 79vw;
-        z-index: 1;
+        
     }
 
     .navbar .drop-menu a {
         color: white;
-        padding: 12px 16px;
         text-decoration: none;
+        padding: 12px 16px;
         display: block;
     }
 
@@ -224,16 +266,19 @@ footer {
 
 /* Media screens bigger than 900px */
 @media only screen and (min-width:901px) {
+    /*
     .button {
         display: none;
-    }
+    }*/
 
     .dropdown {
         display: none;
     }
 
     .navbar {
+        display: flex;
         justify-content: space-around;
+        align-items: center;
     }
 
     .nav-menu {
