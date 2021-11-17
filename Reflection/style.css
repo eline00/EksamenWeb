@@ -85,6 +85,14 @@ footer {
     display: flex;
 }
 
+img.reflection {
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
 @media only screen and (max-width: 600px) {
     .navbar .dropdown .button {
         background-color: transparent;
