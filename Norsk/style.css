@@ -20,6 +20,7 @@ body {
     width: 100%;
     background-color: transparent;
     z-index: 1; /* Puts navbar over other elements to avoid overlap */
+    list-style: none;
 }
 
 .navbar .language {
@@ -81,7 +82,6 @@ header .links{
     position: absolute;
     display: flex;
     justify-content: flex-end;
-    width: 15%;
     align-items: center;
     padding-left: 0;
     top: 30rem;
@@ -94,6 +94,7 @@ header .links .viewMore {
     color: black;
     font-size: 20px;
     padding: 10px;
+    white-space: nowrap;
 }
 
 header .links .pil {
@@ -183,7 +184,6 @@ footer {
 
     .navbar .language {
         position: relative;
-        margin-left: auto;
     }
 
     .nav-menu {

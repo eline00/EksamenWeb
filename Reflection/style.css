@@ -20,6 +20,7 @@ body {
     background: url(/Images/homepagepic.png) rgba(0, 0, 0, 0.541);
     background-blend-mode: multiply;
     z-index: 1; /* Puts navbar over other elements to avoid overlap */
+    list-style: none;
 }
 
 .navbar .language {
@@ -46,7 +47,7 @@ main {
     background-color: rgb(41, 41, 41);
     color: white;
     height: auto;
-    padding: 50px;
+    padding: 50px 0px 50px 50px;
 }
 
 main h2 {
@@ -60,8 +61,9 @@ main h2 span {
 }
 
 main p {
-    max-width: 70vw;
+    max-width: 90vw;
     font-size: 20px;
+    float: none;
 }
 
 footer {
@@ -86,13 +88,28 @@ footer {
     display: flex;
 }
 
-img.reflection {
-    width: 800px;
-    max-width: 100%;
-    height: auto;
+main img {
+    height: 50vh;
     border-radius: 10px;
+}
+
+main .reflection {
+    float: right;
+    margin: 0px 0px 20px 20px;
     
 }
+
+main .auditorium {
+    float: left;
+    margin: 0px 20px 20px 0px;
+}
+
+main .economy {
+    float: right;
+    margin: 0px 0px 20px 20px;
+    width: 50vw;
+}
+
 
 /* Media screens smaller than 600px */
 @media only screen and (max-width:600px) {
