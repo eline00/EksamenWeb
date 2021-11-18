@@ -64,6 +64,7 @@ main p {
     max-width: 90vw;
     font-size: 20px;
     float: none;
+    padding-top: 20px;
 }
 
 footer {
@@ -89,7 +90,7 @@ footer {
 }
 
 main img {
-    height: 50vh;
+    height: 40vh;
     border-radius: 10px;
 }
 
@@ -107,7 +108,6 @@ main .auditorium {
 main .economy {
     float: right;
     margin: 0px 0px 20px 20px;
-    width: 50vw;
 }
 
 
