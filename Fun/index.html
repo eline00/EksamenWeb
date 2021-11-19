@@ -10,36 +10,42 @@
 
     <!-- Body: contains navigation bar and a dropdown menu with navigation for smaller screens -->
     <body>
-        <nav class="navbar">
-            <a href="/index.html">HOME</a>
-
-            <div class="language">
-                <p> <a href="/">EN</a> | <a href="/Norsk/index.html">NO</a></p>
-            </div>
-
-            <!-- Div: contains button with dropdown menu navigation -->
-            <div class="dropdown">
-                <button class="button">MENU</button>
-                <div class="drop-menu">
-                    <a href="../index.html">HOME</a>
-                    <a href="/Reflection/index.html">REFLECTION</a>
-                    <a href="/Accessibility/index.html">ACCESSIBILITY</a>
-                    <a href="/Tech&Society/index.html">TECHNOLOGY & SOCIETY</a>
-                    <a href="/Fun/index.html">FUN</a>
-                </div>
-            </div>
-        </nav>
+        <nav>
+            <ul class="navbar" id="navbar">
+                <li class="home"><a href="/">HOME</a></li>
+                <li class="dropdown">
+                    <button class="button"> <img src="../Images/Menu.png" alt=""> </button>
+                    <div class="drop-menu">
+                        <a href="/index.html">HOME</a>
+                        <a href="/Reflection/index.html">REFLECTION</a>
+                        <a href="/Accessibility/index.html">ACCESSIBILITY</a>
+                        <a href="/Tech&Society/index.html">TECHNOLOGY & SOCIETY</a>
+                        <a href="/Fun/index.html">FUN</a>
+                    </div>
+                </li>
+                <!-- Links: for changing the languge to English or Norwegian -->
+                <li class="language"><p> <a href="/">EN</a> | <a href="/Norsk/index.html">NO</a></p></li>
+            </ul>
+        </nav> 
 
         <!-- Main: contains text with more infromation -->
         <main>
-            <div>
-                <p>Fadderuka</p>
-            </div>
+            <p>Buddy week</p>
+
+            <fig class="slideshow">
+                <div class="slides">
+                  <div class="slide_1"><img src="../Images/Slide1.jpg" alt="Slideshow"></div>
+                  <div class="slide_2"><img src="../Images/Slide2.jpg" alt="Slideshow"></div>
+                  <div class="slide_3"><img src="../Images/Slide3.jpg" alt="Slideshow"></div>
+                </div>    
+            </fig>
+            <figcaption>Pictures taken from the buddy week 2021</figcaption>
         </main>
 
         <!-- Footer: contains icons with links to OsloMet's different social media accounts-->
         <footer>
-            <img src="/Images/logosort.png" class="blackLogo"alt="OSLOMET">
+            <!-- Black logo with link to the top of the page-->
+            <a href="#navbar"><img src="/Images/logosort.png" class="blackLogo" alt="OSLOMET"></a> 
             <div class="icons">
                 <ul>
                     <a href="https://www.facebook.com/groups/studiehverdag.oslomet" target="_blank"> <img src="/Images/Facebook.png" alt="Facebook"></a> 
@@ -48,4 +54,5 @@
                 </ul>
             </div>
         </footer>
+    </body>
 </html>
