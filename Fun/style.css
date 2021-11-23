@@ -93,23 +93,46 @@ body {
 
 main {
     display: flex;
-    height: 100vh;
     flex-direction: column;
     align-items: center;
-    margin: 200px 30px 10px 45px;
+    margin: 300px 30px 10px 45px;
 }
 
-main .persPic {
+main li {
+    list-style: none;
+}
+
+main .persPics {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0;
+    width: 100%;
+
 }
 
-main .persPic li img {
-    size: 15px;
+main .persPics img {
+    height: 15vh;
+    border-radius: 50%;
 }
 
 
-main p {
+main .title {
+    font-size: 30px;
+}
+
+main .buddylink {
+    padding: 20px;
+    border: solid black;
+    border-radius: 30px;
+    margin-top: 40px;
+}
+
+main .buddylink a {
+    color: black;
+    text-transform: uppercase;
+}
+
+main .placeholder {
     font-size: 20px;
 }
 
