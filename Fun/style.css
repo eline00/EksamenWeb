@@ -104,14 +104,26 @@ main li {
 
 main .persPics {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding-left: 0;
+    width: 100%;
+}
+
+main .persPics img {
+    height: 20vh;
+    border-radius: 50%;
+}
+
+main .persPics2 {
+    display: flex;
+    justify-content: space-evenly;
     padding-left: 0;
     width: 100%;
 
 }
 
-main .persPics img {
-    height: 15vh;
+main .persPics2 img {
+    height: 20vh;
     border-radius: 50%;
 }
 

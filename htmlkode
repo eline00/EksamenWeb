@@ -16,14 +16,9 @@ body {
 }
 
 .navbar {
-    display: flex;
-    position: relative;
-    align-items: center;
+    position: absolute;
     width: 100%;
-    margin: 0;
-    background: url(/Images/homepagepic.png) rgba(0, 0, 0, 0.541);
-    background-size: cover;
-    background-blend-mode: multiply;
+    background-color: transparent;
     z-index: 1; /* Puts navbar over other elements to avoid overlap */
     list-style: none;
 }
@@ -47,9 +42,68 @@ body {
     padding: 20px;
 }
 
-main {
-    display: flex;
+header {
+    background: url("./Images/Homepagepic.png") rgba(0, 0, 0, 0.541);
+    background-blend-mode: multiply; /* Blends the background image with the background color */
+    background-position: center center;
+    background-size: cover;
+    max-width: 100%;
+    height: 100vh; 
+    display: block;
     position: relative;
+}
+
+header div {
+    position: absolute;
+    text-align: center;
+    top: 8rem;
+    padding: 6rem;
+
+}
+
+header h1{
+    color: white;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 50px;
+    line-height: 1;
+    margin: 0px;
+    white-space: nowrap;
+}
+
+header p{
+    color: rgb(255, 217, 0);
+    font-size: 25px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+header .links{
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 0;
+    top: 30rem;
+    left: 6rem;
+}
+
+header .links .viewMore {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+header .links .pil {
+    background-color: rgb(255, 217, 0);
+}
+
+
+main {
+    display: block;
     background-color: rgb(41, 41, 41);
     color: white;
     height: auto;
@@ -62,26 +116,40 @@ main h2 {
     text-transform: uppercase;
 }
 
-main h2 span {
-    color: rgb(255, 217, 0);
-}
-
 main p {
     max-width: 70vw;
-    font-size: 20px;
+    font-size: 30px;
 }
 
-main p a {
+/*Makes the title yellow*/
+main h2 span {
+    color: rgb(255, 217, 0); 
+}
+
+main ul li {
+    font-size: 20px;
+    list-style: none;
+    padding: 3px;
+    margin-left: -1rem;
+}
+
+main ul li::before {
+    content: "\2022";
+    color: rgb(255, 217, 0);
+    padding-right: 5px;
+}
+
+main ul li a {
     color: white;
 }
-
 
 footer {
-    display: block;
+    display: flex;
     background-color: rgb(255, 217, 0);
-    height: 15vh;
+    height: auto;
     color: white;
     text-align: left;
+    align-items: center;
 }
 
 .blackLogo {
@@ -89,20 +157,13 @@ footer {
     float: left;
 }
 
-.icons {
-    padding-top: 1px;
+.icons ul {
+    padding: 0;
 }
 
 .icons img {
     height: 4vh;
     display: flex;
-}
-
-img.universal {
-    width: 800px;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
 }
 
 /* Media screens smaller than 600px */
@@ -150,8 +211,13 @@ img.universal {
         display: block;
     }
 
+    .navbar .drop-menu a:hover {
+        background-color: rgba(145, 145, 145, 0.521);
+    }
+
     .navbar .dropdown:hover .drop-menu {
         display: block;
+        background-color: rgba(41, 41, 41, 0.836);
     }
 }
 
@@ -201,22 +267,31 @@ img.universal {
         display: block;
     }
 
+    .navbar .drop-menu a:hover {
+        background-color: rgba(145, 145, 145, 0.521);
+    }
+
     .navbar .dropdown:hover .drop-menu {
         display: block;
+        background-color: rgba(41, 41, 41, 0.836);
     }
 }
 
-@media only screen and (min-width: 901px) {
+/* Media screens bigger than 900px */
+@media only screen and (min-width:901px) {
+    /*
     .button {
         display: none;
-    }
+    }*/
 
     .dropdown {
         display: none;
     }
 
     .navbar {
+        display: flex;
         justify-content: space-around;
+        align-items: center;
     }
 
     .nav-menu {
@@ -228,7 +303,6 @@ img.universal {
         padding-left: 0;
         justify-content:space-around;
         list-style: none;
-        padding-left: 0;
     }
 
     .nav-menu ul li {
@@ -248,7 +322,7 @@ img.universal {
         font-size: 20px;
     }
     
-    li:first-child a{
+    .navbar li:first-child a{
         color: rgb(255, 217, 0); /*Makes first list element (home) yellow*/
     } 
 }

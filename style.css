@@ -10,17 +10,23 @@ html {
 
 body {
     font-family: Roboto, sans-serif;
-    font-size: 14px;
     padding: 0;
     margin: 0;
+    background: url("../Images/Homepagepic.png" ) rgba(0, 0, 0, 0.541);
+    background-blend-mode: multiply; /* Blends the background image with the background color */
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
 }
 
 .navbar {
-    position: absolute;
+    display: flex;
+    position: relative;
     width: 100%;
     background-color: transparent;
-    z-index: 1; /* Puts navbar over other elements to avoid overlap */
     list-style: none;
+    z-index: 1; /* Puts navbar over other elements to avoid overlap */
+
 }
 
 .navbar .language {
@@ -43,22 +49,15 @@ body {
 }
 
 header {
-    background: url("./Images/Homepagepic.png") rgba(0, 0, 0, 0.541);
-    background-blend-mode: multiply; /* Blends the background image with the background color */
-    background-position: center center;
-    background-size: cover;
     max-width: 100%;
-    height: 100vh; 
+    height: 75vh; 
     display: block;
-    position: relative;
 }
 
 header div {
     position: absolute;
     text-align: center;
-    top: 8rem;
     padding: 6rem;
-
 }
 
 header h1{
@@ -93,7 +92,7 @@ header .links .viewMore {
     text-decoration: none;
     color: black;
     font-size: 20px;
-    padding: 10px;
+    padding: 11px;
     white-space: nowrap;
 }
 
@@ -101,6 +100,38 @@ header .links .pil {
     background-color: rgb(255, 217, 0);
 }
 
+.welcome h2 {
+    font-size: 30px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.welcome p {
+    max-width: 70vw;
+    font-size: 30px;
+}
+
+/*Makes the title yellow*/
+.welcome h2 span {
+    color: rgb(255, 217, 0); 
+}
+
+.welcome ul li {
+    font-size: 20px;
+    list-style: none;
+    padding: 3px;
+    margin-left: -1rem;
+}
+
+.welcome ul li::before {
+    content: "\2022";
+    color: rgb(255, 217, 0);
+    padding-right: 5px;
+}
+
+.welcome ul li a {
+    color: white;
+}
 
 main {
     display: block;
@@ -116,31 +147,40 @@ main h2 {
     text-transform: uppercase;
 }
 
-main p {
-    max-width: 70vw;
-    font-size: 30px;
-}
-
-/*Makes the title yellow*/
 main h2 span {
-    color: rgb(255, 217, 0); 
-}
-
-main ul li {
-    font-size: 20px;
-    list-style: none;
-    padding: 3px;
-    margin-left: -1rem;
-}
-
-main ul li::before {
-    content: "\2022";
     color: rgb(255, 217, 0);
-    padding-right: 5px;
 }
 
-main ul li a {
+main p {
+    max-width: 90vw;
+    font-size: 20px;
+    float: none;
+    padding-top: 20px;
+}
+
+main a {
     color: white;
+}
+
+main img {
+    height: 40vh;
+    border-radius: 10px;
+}
+
+.reflectionContainer .img1 {
+    float: right;
+    margin: 0px 0px 20px 20px;
+    
+}
+
+.reflectionContainer .img2 {
+    float: left;
+    margin: 0px 20px 20px 0px;
+}
+
+.reflectionContainer .img3 {
+    float: right;
+    margin: 0px 0px 20px 20px;
 }
 
 footer {
@@ -279,11 +319,6 @@ footer {
 
 /* Media screens bigger than 900px */
 @media only screen and (min-width:901px) {
-    /*
-    .button {
-        display: none;
-    }*/
-
     .dropdown {
         display: none;
     }
