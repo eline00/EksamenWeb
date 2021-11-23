@@ -99,6 +99,16 @@ main {
     margin: 200px 30px 10px 45px;
 }
 
+main .persPic {
+    display: flex;
+    flex-direction: row;
+}
+
+main .persPic li img {
+    size: 15px;
+}
+
+
 main p {
     font-size: 20px;
 }
