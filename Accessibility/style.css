@@ -18,6 +18,7 @@ body {
     width: 100%;
     margin: 0;
     background: url(/Images/homepagepic.png) rgba(0, 0, 0, 0.541);
+    background-size: cover;
     background-blend-mode: multiply;
     z-index: 1; /* Puts navbar over other elements to avoid overlap */
     list-style: none;

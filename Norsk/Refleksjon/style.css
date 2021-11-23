@@ -4,6 +4,10 @@
      box-sizing: border-box; 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Roboto, sans-serif;
     font-size: 14px;
@@ -18,6 +22,7 @@ body {
     width: 100%;
     margin: 0;
     background: url(/Images/homepagepic.png) rgba(0, 0, 0, 0.541);
+    background-size: cover;
     background-blend-mode: multiply;
     z-index: 1; /* Puts navbar over other elements to avoid overlap */
     list-style: none;
@@ -47,7 +52,7 @@ main {
     background-color: rgb(41, 41, 41);
     color: white;
     height: auto;
-    padding: 50px;
+    padding: 50px 0px 50px 50px;
 }
 
 main h2 {
@@ -61,8 +66,10 @@ main h2 span {
 }
 
 main p {
-    max-width: 70vw;
+    max-width: 90vw;
     font-size: 20px;
+    float: none;
+    padding-top: 20px;
 }
 
 footer {
@@ -87,13 +94,27 @@ footer {
     display: flex;
 }
 
-img.reflection {
-    width: 800px;
-    max-width: 100%;
-    height: auto;
+main img {
+    height: 40vh;
     border-radius: 10px;
+}
+
+main .reflection {
+    float: right;
+    margin: 0px 0px 20px 20px;
     
 }
+
+main .auditorium {
+    float: left;
+    margin: 0px 20px 20px 0px;
+}
+
+main .economy {
+    float: right;
+    margin: 0px 0px 20px 20px;
+}
+
 
 /* Media screens smaller than 600px */
 @media only screen and (max-width:600px) {
