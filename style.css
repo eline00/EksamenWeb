@@ -43,7 +43,7 @@ body {
 }
 
 header {
-    background: url(./Images/Homepagepic.png) rgba(0, 0, 0, 0.541);
+    background: url("./Images/Homepagepic.png") rgba(0, 0, 0, 0.541);
     background-blend-mode: multiply; /* Blends the background image with the background color */
     background-position: center center;
     background-size: cover;
