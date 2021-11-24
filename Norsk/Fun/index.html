@@ -10,72 +10,69 @@
 
     <!-- Body: contains navigation bar and a dropdown menu with navigation for smaller screens -->
     <body>
-        <nav class="navbar">
-            <a href="/index.html" class="yellowLogo"> <img src="/Images/logogul.png" alt="OSLOMET"></a>
-            <div class="nav-menu">
-                <ul>
-                     <li><a href="/index.html">HOME</a></li>
-                     <li><a href="/Reflection/index.html">REFLECTION</a></li>
-                     <li><a href="/Accesibility/index.html">ACCESSIBILITY</a></li>
-                     <li><a href="/Tech&Society/index.html">TECHNOLOGY & SOCIETY</a></li>
-                     <li><a href="/Fun/index.html">FUN</a></li>
-                </ul>
-            </div>
-
-            <div class="language">
-                <p> <a href="/">EN</a> | <a href="/Norsk/Fun/index.html">NO</a></p>
-            </div>
-
-            <!-- Div: contains button with dropdown menu navigation -->
-            <div class="dropdown">
-                <button class="button">MENU</button>
-                <div class="drop-menu">
-                    <a href="/Homepage/index.html">HOME</a>
-                    <a href="/Reflection/index.html">REFLECTION</a>
-                    <a href="/Accessibility/index.html">ACCESSIBILITY</a>
-                    <a href="/Tech&Society/index.html">TECHNOLOGY & SOCIETY</a>
-                    <a href="/Fun/index.html">FUN</a>
-                </div>
-            </div>
-        </nav>
+        <nav>
+            <ul class="navbar" id="navbar">
+                <li class="home"><a href="/">HJEM</a></li>
+                <li class="dropdown">
+                    <button class="button"> <img src="./Images/Menu.png" alt=""> </button>
+                    <div class="drop-menu">
+                        <a href="../index.html">HJEM</a>
+                        <a href="../Refleksjon/index.html">REFLEKSJON</a>
+                        <a href="../Tilgjengelighet/index.html">TILGJENGELIGHET</a>
+                        <a href="../Tek&Samfunn/index.html">TEKNOLOGI & SAMFUNN</a>
+                        <a href="../Fun/index.html">FUN</a>
+                    </div>
+                </li>
+                <!-- Links: for changing the languge to English or Norwegian -->
+                <li class="language"><p> <a href="../../Fun/index.html">EN</a> | <a href="../Fun/index.html">NO</a></p></li>
+            </ul>
+        </nav> 
 
         <!-- Main: contains text with more infromation -->
         <main>
-            <div>
-                <h2>Being a student rather than a <span>pupil</span></h2>
-                <p>
-                    Going from a pupil to a student has been a big challenge, both academically, socially and financially. At times, it can be quite confusing as no one really tells or guides you. You have to find out for yourself, which really sums up our main point.
-                </p>
-                <p>
-                    There are big demands placed on us as students, and the most important thing is that you are responsible for your own learning. In contrast to upper secondary school, we received close follow-up from the teachers throughout the school year. As a student, it involves a lot of self-study and you are your own boss. Our responsibility applies to the work effort we put in the courses, making sure that you follow the course and stay updated on important information on the learning portal.
-                </p>
-                <p>
-                    When it comes to higher education, it is also challenging to relate to larger groups in different subjects and have a relatively small connection to the lecturer. The flow of information is also very different from high school. Firstly, there is no longer one contact teacher who is responsible for you. The teaching staff are first and foremost the lecturers and you meet an incredible number of students in one day. Therefore, they will to a small extent know the details around exactly your timetable and study. The teaching itself also often takes place in English, which makes it difficult to understand and keep up with. 
-                </p>
-                <p>
-                    This can also affect the motivation to study further, and once you do not understand any of the theory, it is even easier to lose motivation to read up, and gain an understanding of the subject. Once you are demotivated, you will also experience thoughts that the study may not be the right study, and many will also feel alone during the study. But these are normal reactions and thoughts for everyone.
-                </p>
-                <p>
-                    There is much less teaching than what we are used to. There is very little teaching compared to upper secondary school. But that does not necessarily mean that the workload is smaller. In many subjects you often have to sit for several hours with a subject to be able to understand. And usually spends some more time reading through the large textbooks, taking notes, reviewing and expanding notes from lectures and calculating assignments. The theory is heavier and in general it is more challenging as a student in the study. 
-                </p>
-                <p>
-                    Higher education often costs money and for students it involves additional expenses, especially if you have moved away from home and live in a collective or dormitory. In addition, there are student loans and you are left with a large debt if you want to drop out, do not pass courses. Many students have challenges living on only scholarships, so most of them want to have a part-time job. But this can also affect the school, because you will be prioritizing work instead of school.
-                </p>
-                <p>
-                    Nothing comes by itself, and the study period serves as an introduction to the areas of responsibility that adult independence comes with, academically, socially and financially. But at least you will get the dream job in the end which is the great benefit of taking a higher education. 
-                </p>
-            </div>
+            <ul class="persPics">
+                <li><img src="../../Images/Personer/Pers1.png" alt="Person1"></li>
+                <li><img src="../../Images/Personer/Pers2.png" alt="Person2"></li>
+                <li><img src="../../Images/Personer/Pers3.png" alt="Person3"></li>
+                <li><img src="../../Images/Personer/Pers4.png" alt="Person4"></li>
+            </ul>
+
+            <ul class="persPics2">
+                <li><img src="../../Images/Personer/Pers5.png" alt="Person5"></li>
+                <li><img src="../../Images/Personer/Pers6.png" alt="Person6"></li>
+                <li><img src="../../Images/Personer/Pers7.png" alt="Person7"></li>
+            </ul>
+
+            <p class="title">Fadderuken</p>
+            <fig class="slideshow">
+                <div class="slides">
+                  <div class="slide_1"><img src="../../Images/Slide1.jpg" alt="Slideshow"></div>
+                  <div class="slide_2"><img src="../../Images/Slide2.jpg" alt="Slideshow"></div>
+                  <div class="slide_3"><img src="../../Images/Slide3.jpg" alt="Slideshow"></div>
+                </div>    
+            </fig>
+            <figcaption>Bilder fra fadderuken 2021</figcaption>
+
+            <p class="buddylink">
+                <strong>Sjekk ut mer om fadderuken <a href="https://student.oslomet.no/fadderordningen?p_l_back_url=%2Fsok%3Fq%3Dfadderuke" target="_blank">her</a></strong> 
+            </p>
+
+            <p class="placeholder">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
         </main>
 
         <!-- Footer: contains icons with links to OsloMet's different social media accounts-->
         <footer>
-            <img src="/Images/logosort.png" class="blackLogo"alt="OSLOMET">
+            <!-- Black logo with link to the top of the page-->
+            <a href="#navbar"><img src="../../Images/logosort.png" class="blackLogo" alt="OSLOMET"></a> 
             <div class="icons">
                 <ul>
-                    <a href="https://www.facebook.com/groups/studiehverdag.oslomet" target="_blank"> <img src="/Images/Facebook.png" alt="Facebook"></a> 
-                    <a href="https://twitter.com/OsloMet" target="_blank"> <img src="/Images/Twitter.png" alt="Twitter"></a>
-                    <a href="https://www.instagram.com/oslomet/" target="_blank"> <img src="/Images/Instagram.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/groups/studiehverdag.oslomet" target="_blank"> <img src="../../Images/Facebook.png" alt="Facebook"></a> 
+                    <a href="https://twitter.com/OsloMet" target="_blank"> <img src="../../Images/Twitter.png" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/oslomet/" target="_blank"> <img src="../../Images/Instagram.png" alt="Instagram"></a>
                 </ul>
             </div>
         </footer>
+    </body>
 </html>
