@@ -225,6 +225,10 @@ footer {
     align-items: center;
 }
 
+footer p {
+    margin: auto;
+}
+
 .blackLogo {
     height: 15vh;
     float: left;
