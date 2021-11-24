@@ -75,6 +75,7 @@ header h2{
     font-size: 25px;
     text-align: left;
     white-space: nowrap;
+    font-weight: initial;
 }
 
 header .links{
