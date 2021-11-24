@@ -85,6 +85,7 @@ header .links{
     padding-left: 0;
     top: 30rem;
     left: 6rem;
+    list-style: none;
 }
 
 header .links .viewMore {
@@ -92,12 +93,13 @@ header .links .viewMore {
     text-decoration: none;
     color: black;
     font-size: 20px;
-    padding: 11px;
+    padding: 13px 10px 9px 10px;
     white-space: nowrap;
 }
 
-header .links .pil {
+header .links .pil img{
     background-color: rgb(255, 217, 0);
+    height: 45px;
 }
 
 .welcome h2 {
@@ -204,6 +206,7 @@ footer p {
 
 .icons ul {
     padding: 0;
+    list-style: none;
 }
 
 .icons img {
