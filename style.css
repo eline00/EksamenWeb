@@ -69,11 +69,11 @@ main {
     background-color: rgb(41, 41, 41);
     color: white;
     height: auto;
-    padding: 50px;
+    padding: 50px 300px 50px 50px;
 }
 
 main p {
-    max-width: 90vw;
+    max-width: 70vw;
     font-size: 20px;
     float: none;
     padding-top: 20px;
@@ -140,7 +140,7 @@ HOME PAGE:
 
 .headerHome div {
     position: absolute;
-    padding: 6rem;
+    padding: 5rem 0rem 6rem 6rem;
 }
 
 .headerHome h1{
@@ -167,7 +167,7 @@ HOME PAGE:
     justify-content: flex-end;
     align-items: center;
     padding-left: 0;
-    top: 30rem;
+    margin-top: 20rem;
     left: 6rem;
     list-style: none;
 }
@@ -220,15 +220,26 @@ HOME PAGE:
 .welcome .oslometLink {
     border: 1px solid;
     padding: 20px;
-    margin-top: 60px;
+    margin-top: 30px;
     border-radius: 20px;
     font-size: 25px;
+}
+
+/* 
+ACCESSIBILITY PAGE: 
+--------------------------------------------------------------------------------------
+*/
+
+.accessContainer figure {
+    margin: 0;
+    padding: 10px;
 }
 
 
 /*
 Media screens between 600px and 900px:
  - Putting navbar into hamburger icon menu 
+ - Resizes images with smaller screens
 */
 @media only screen and (max-width:900px) { 
     .navbar .dropdown .button {
@@ -284,7 +295,7 @@ Media screens between 600px and 900px:
 
     .universalContainer .img1, 
     .reflectionContainer .img1, .reflectionContainer .img3, 
-    .reflectionContainer .img2 {
+    .reflectionContainer .img2 , .accessContainer img{
         width: 80vw;
         height: auto;
         margin: 20px 0px 20px 0px;
@@ -303,7 +314,7 @@ Media screens between 600px and 900px:
 /* 
 Media screens bigger than 900px:
  - Shows navbar and hides hamburger menu
-  */
+*/
 @media only screen and (min-width:901px) {
     .dropdown {
         display: none;
@@ -347,13 +358,9 @@ Media screens bigger than 900px:
         color: rgb(255, 217, 0); /*Makes first list element (home) yellow*/
     } 
 
-    .reflectionContainer img, .universalContainer .img1 {
-        width: 60vw;
-        height: auto;
-    }
-
-    .universalContainer .img2 {
-        width: 40vw;
+    .reflectionContainer img, .universalContainer .img1, 
+    .accessContainer img {
+        width: 400px;
         height: auto;
     }
 
