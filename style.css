@@ -196,6 +196,8 @@ HOME PAGE:
     font-size: 30px;
 }
 
+
+
 .welcome ul li {
     font-size: 25px;
     list-style: none;
@@ -210,15 +212,17 @@ HOME PAGE:
     padding-right: 5px;
 }
 
-.welcome ul li a {
+.welcome a {
     color: rgb(255, 217, 0);
 }
 
-/* 
-REFLECTION PAGE: 
---------------------------------------------------------------------------------------
-*/
-
+.welcome .oslometLink {
+    border: 1px solid;
+    padding: 20px;
+    margin-top: 60px;
+    border-radius: 20px;
+    font-size: 25px;
+}
 
 /* 
 Media screens smaller than 600px: 
