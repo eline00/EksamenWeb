@@ -197,7 +197,7 @@ HOME PAGE:
 }
 
 .welcome ul li {
-    font-size: 20px;
+    font-size: 25px;
     list-style: none;
     padding: 3px;
     margin-left: -1rem;
@@ -276,13 +276,26 @@ Media screens smaller than 600px:
         display: block;
         background-color: rgba(41, 41, 41, 0.836);
     }
+
+    .universalContainer .img1, .reflectionContainer .img1, .reflectionContainer .img3, 
+    .reflectionContainer .img2 {
+        height: 35vh;
+        float: left;
+        margin: 20px 0px 20px 0px;
+    }
+
+    .reflectionContainer p {
+        clear: both;
+    }
+    
+
+    .universalContainer .img2 {
+        float: left;
+        margin: 20px 20px 0px 0px;
+    }
 }
 
-/*
-Media screens between 600px and 900px:
- - Putting navbar into hamburger icon menu 
-*/
-@media only screen and (max-width:900px) and (min-width:600px) { 
+@media only screen and (max-width:850px) and (min-width:601px) {
     .navbar .dropdown .button {
         background-color: transparent;
         cursor: pointer;
@@ -334,9 +347,86 @@ Media screens between 600px and 900px:
         background-color: rgba(41, 41, 41, 0.836);
     }
 
-    .reflectionContainer img  {
+    .universalContainer .img1, .reflectionContainer .img1, .reflectionContainer .img2,
+    .reflectionContainer .img3 {
+        height: 40vh;
+    }
+
+    .universalContainer p:nth-child(2) {
+        clear: both;
+    }
+
+    .universalContainer .img2 {
+        float: left;
+        margin: 20px 20px 0px 0px;
+    }
+
+}
+/*
+Media screens between 600px and 900px:
+ - Putting navbar into hamburger icon menu 
+*/
+@media only screen and (max-width:900px) and (min-width:851px) { 
+    .navbar .dropdown .button {
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        position: relative;
+    }
+
+    .button img {
+        height: 50px;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar .language {
+        position: relative;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .navbar .dropdown {
+        position: relative;
+        margin-left: auto;
+    }
+
+    .navbar .drop-menu {
+        display: none;
+        position: absolute;
+        
+    }
+
+    .navbar .drop-menu a {
+        color: white;
+        text-decoration: none;
+        padding: 12px 16px;
+        display: block;
+    }
+
+    .navbar .drop-menu a:hover {
+        background-color: rgba(145, 145, 145, 0.521);
+    }
+
+    .navbar .dropdown:hover .drop-menu {
+        display: block;
+        background-color: rgba(41, 41, 41, 0.836);
+    }
+
+    .reflectionContainer .img1, .reflectionContainer .img3,
+    .universalContainer .img1 {
         float: right;
-        margin: 0px 0px 20px 20px;
+        margin: 20px;
+    }
+
+    .reflectionContainer .img2, .universalContainer .img2 {
+        float: left;
+        margin: 0px 20px 20px 0px;
     }
 }
 
@@ -387,16 +477,16 @@ Media screens bigger than 900px:
         color: rgb(255, 217, 0); /*Makes first list element (home) yellow*/
     } 
 
-    .reflectionContainer .img1, .reflectionContainer .img3 {
+    .reflectionContainer .img1, .reflectionContainer .img3,
+    .universalContainer .img1 {
         float: right;
-        margin: 0px 0px 20px 20px;
+        margin: 20px;
     }
-    .reflectionContainer .img2  {
+
+    .reflectionContainer .img2, .universalContainer .img2 {
         float: left;
         margin: 0px 20px 20px 0px;
     }
-
-    
 }
 
 
