@@ -24,7 +24,6 @@ body {
     position: relative;
     width: 100%;
     background-color: transparent;
-    list-style: none;
     z-index: 1; /* Puts navbar over other elements to avoid overlap */
 
 }
@@ -48,92 +47,20 @@ body {
     padding: 20px;
 }
 
-header {
-    max-width: 100%;
-    height: 75vh; 
-    display: block;
-}
-
-header div {
-    position: absolute;
+.header {
     text-align: center;
-    padding: 6rem;
-}
-
-header h1{
     color: white;
+    font-size: 15px;
+}
+
+.header h1 {
+    width: 300px;
+    margin: 30px auto 60px auto;
+    padding: 20px;
+    border: solid white;
+    border-radius: 20px;
+    border-width: 2px;
     text-transform: uppercase;
-    text-align: left;
-    font-size: 50px;
-    line-height: 1;
-    margin: 0px;
-    white-space: nowrap;
-}
-
-header h2{
-    color: rgb(255, 217, 0);
-    font-size: 25px;
-    text-align: left;
-    white-space: nowrap;
-    font-weight: initial;
-}
-
-header .links{
-    position: absolute;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-left: 0;
-    top: 30rem;
-    left: 6rem;
-    list-style: none;
-}
-
-header .links .viewMore {
-    background-color: white;
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    padding: 13px 10px 9px 10px;
-    white-space: nowrap;
-}
-
-header .links .pil img{
-    background-color: rgb(255, 217, 0);
-    height: 45px;
-}
-
-.welcome h2 {
-    font-size: 30px;
-    text-align: left;
-    text-transform: uppercase;
-}
-
-.welcome p {
-    max-width: 70vw;
-    font-size: 30px;
-}
-
-/*Makes the title yellow*/
-.welcome h2 span {
-    color: rgb(255, 217, 0); 
-}
-
-.welcome ul li {
-    font-size: 20px;
-    list-style: none;
-    padding: 3px;
-    margin-left: -1rem;
-}
-
-.welcome ul li::before {
-    content: "\2022";
-    color: rgb(255, 217, 0);
-    padding-right: 5px;
-}
-
-.welcome ul li a {
-    color: white;
 }
 
 main {
@@ -142,16 +69,6 @@ main {
     color: white;
     height: auto;
     padding: 50px;
-}
-
-.reflectionContainer h1, .universalContainer h1, .accessContainer h1 {
-    font-size: 30px;
-    text-align: left;
-    text-transform: uppercase;
-}
-
-.reflectionContainer h1 span, .universalContainer h1 span, .accessContainer h1 span {
-    color: rgb(255, 217, 0);
 }
 
 main p {
@@ -168,22 +85,6 @@ main a {
 main img {
     height: 40vh;
     border-radius: 10px;
-}
-
-.reflectionContainer .img1 {
-    float: right;
-    margin: 0px 0px 20px 20px;
-    
-}
-
-.reflectionContainer .img2 {
-    float: left;
-    margin: 0px 20px 20px 0px;
-}
-
-.reflectionContainer .img3 {
-    float: right;
-    margin: 0px 0px 20px 20px;
 }
 
 footer {
@@ -215,7 +116,115 @@ footer p {
     display: flex;
 }
 
-/* Media screens smaller than 600px */
+span {
+    color: rgb(255, 217, 0);
+}
+
+.h1 {
+    font-size: 30px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+/* 
+HOME PAGE: 
+--------------------------------------------------------------------------------------
+*/
+
+.headerHome {
+    max-width: 100%;
+    height: 75vh; 
+    display: block;
+}
+
+.headerHome div {
+    position: absolute;
+    padding: 6rem;
+}
+
+.headerHome h1{
+    color: white;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 50px;
+    line-height: 1;
+    margin: 0px;
+    white-space: nowrap;
+}
+
+.headerHome h2{
+    color: rgb(255, 217, 0);
+    font-size: 25px;
+    text-align: left;
+    white-space: nowrap;
+    font-weight: initial;
+}
+
+.headerHome .links{
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 0;
+    top: 30rem;
+    left: 6rem;
+    list-style: none;
+}
+
+.headerHome .links .viewMore {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 13px 10px 9px 10px;
+    white-space: nowrap;
+}
+
+.headerHome .links .pil img{
+    background-color: rgb(255, 217, 0);
+    height: 45px;
+}
+
+.welcome h2 {
+    font-size: 30px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.welcome p {
+    max-width: 70vw;
+    font-size: 30px;
+}
+
+.welcome ul li {
+    font-size: 20px;
+    list-style: none;
+    padding: 3px;
+    margin-left: -1rem;
+}
+
+/* Making the bullet points yellow */
+.welcome ul li::before {
+    content: "\2022";
+    color: rgb(255, 217, 0);
+    padding-right: 5px;
+}
+
+.welcome ul li a {
+    color: rgb(255, 217, 0);
+}
+
+/* 
+REFLECTION PAGE: 
+--------------------------------------------------------------------------------------
+*/
+
+
+/* 
+Media screens smaller than 600px: 
+ - Putting navbar into hamburger icon menu 
+ - Resizing images to fit smaller screens
+*/
 @media only screen and (max-width:600px) {
     .navbar .dropdown .button {
         background-color: transparent;
@@ -229,7 +238,6 @@ footer p {
     }
 
     .navbar {
-        display: flex;
         justify-content: space-between;
         align-items: center;
     }
@@ -270,7 +278,10 @@ footer p {
     }
 }
 
-/* Media screens between 600px and 900px */
+/*
+Media screens between 600px and 900px:
+ - Putting navbar into hamburger icon menu 
+*/
 @media only screen and (max-width:900px) and (min-width:600px) { 
     .navbar .dropdown .button {
         background-color: transparent;
@@ -284,10 +295,8 @@ footer p {
     }
 
     .navbar {
-        display: flex;
         justify-content: space-between;
         align-items: center;
-
     }
 
     .navbar .language {
@@ -324,9 +333,17 @@ footer p {
         display: block;
         background-color: rgba(41, 41, 41, 0.836);
     }
+
+    .reflectionContainer img  {
+        float: right;
+        margin: 0px 0px 20px 20px;
+    }
 }
 
-/* Media screens bigger than 900px */
+/* 
+Media screens bigger than 900px:
+ - Shows navbar and hides hamburger menu
+  */
 @media only screen and (min-width:901px) {
     .dropdown {
         display: none;
@@ -369,6 +386,17 @@ footer p {
     .navbar li:first-child a{
         color: rgb(255, 217, 0); /*Makes first list element (home) yellow*/
     } 
+
+    .reflectionContainer .img1, .reflectionContainer .img3 {
+        float: right;
+        margin: 0px 0px 20px 20px;
+    }
+    .reflectionContainer .img2  {
+        float: left;
+        margin: 0px 20px 20px 0px;
+    }
+
+    
 }
 
 
