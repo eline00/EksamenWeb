@@ -72,7 +72,7 @@ body {
 .navbar .drop-menu {
     display: none;
     position: absolute;
-    background-color: rgba(236, 189, 157, 0.863);
+    background-color: rgba(236, 188, 157, 0.315);
 }
 
 .navbar .drop-menu a {
@@ -105,25 +105,29 @@ main li {
 main .persPics {
     display: flex;
     justify-content: space-around;
-    padding-left: 0;
+    padding-left: 10;
     width: 100%;
 }
 
 main .persPics img {
-    height: 20vh;
+    height: auto;
+    min-width: 125px;
+    max-width: 130px;
     border-radius: 50%;
 }
 
 main .persPics2 {
     display: flex;
     justify-content: space-evenly;
-    padding-left: 0;
+    padding-left: 10;
     width: 100%;
 
 }
 
 main .persPics2 img {
-    height: 20vh;
+    height: auto;
+    min-height: 125px;
+    max-height: 130px;
     border-radius: 50%;
 }
 
@@ -135,9 +139,9 @@ main .title {
 
 main .buddylink {
     padding: 20px;
-    border: solid black;
+    border: 1px solid black;
     border-radius: 30px;
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
 main .buddylink a {
@@ -152,7 +156,8 @@ main .placeholder {
 /* Using code taken from oblig1 to create slideshow */
 .slideshow
 {
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   height: 400px;
   overflow: hidden;
   position: relative;
@@ -219,9 +224,13 @@ main .placeholder {
   90% {left:-1200px;}
 }
 
+main figcaption {
+    padding-top: 13px;
+}
+
 footer {
     display: flex;
-    background-color: transparent;
+    background-color: rgb(230, 208, 176);
     text-align: left;
     align-items: center;
 }

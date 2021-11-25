@@ -25,27 +25,32 @@ body {
     width: 100%;
     background-color: transparent;
     z-index: 1; /* Puts navbar over other elements to avoid overlap */
-
+    list-style: none;
 }
 
-.navbar .language {
+.navbar .language2 {
     color: rgb(255, 217, 0);
     white-space: nowrap;
     padding-right: 1rem;
     padding-left: 1rem;
     font-size: 20px;
     list-style: none;
+    align-self: flex-start;
+    margin-top: -15px;
+    margin-right: 5px;
 }
 
-.navbar .language a {
+.navbar .language2 a {
     color: rgb(255, 217, 0);
     text-decoration: none;
 }
 
 .yellowLogo img {
-    width: 20vw;
+    
     height: auto;
     padding: 20px;
+    min-width: 150px;
+    max-width: 175px;
 }
 
 .header {
@@ -55,11 +60,9 @@ body {
 }
 
 .header h1 {
-    width: 300px;
+    width: 350px;
     margin: 30px auto 60px auto;
     padding: 20px;
-    border: solid white;
-    border-radius: 20px;
     border-width: 2px;
     text-transform: uppercase;
 }
@@ -69,14 +72,18 @@ main {
     background-color: rgb(41, 41, 41);
     color: white;
     height: auto;
-    padding: 50px 300px 50px 50px;
+}
+
+.accessContainer, .universalContainer, .reflectionContainer {
+    padding: 50px 50px 50px 50px;
 }
 
 main p {
-    max-width: 70vw;
+    max-width: 1000px;
     font-size: 20px;
     float: none;
     padding-top: 20px;
+    text-align: left;
 }
 
 main a {
@@ -125,6 +132,16 @@ span {
     font-size: 30px;
     text-align: left;
     text-transform: uppercase;
+}
+
+main a {
+    color: rgb(255, 217, 0);
+    font-style: italic;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
 }
 
 /* 
@@ -186,6 +203,10 @@ HOME PAGE:
     height: 45px;
 }
 
+.welcome {
+    padding: 50px 0px 50px 50px;
+}
+
 .welcome h2 {
     font-size: 30px;
     text-align: left;
@@ -193,11 +214,8 @@ HOME PAGE:
 }
 
 .welcome p {
-    max-width: 70vw;
     font-size: 30px;
 }
-
-
 
 .welcome ul li {
     font-size: 25px;
@@ -213,16 +231,16 @@ HOME PAGE:
     padding-right: 5px;
 }
 
-.welcome a {
-    color: rgb(255, 217, 0);
-}
-
 .welcome .oslometLink {
     border: 1px solid;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
     border-radius: 20px;
     font-size: 25px;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 /* 
@@ -231,8 +249,10 @@ ACCESSIBILITY PAGE:
 */
 
 .accessContainer figure {
-    margin: 0;
+    width: 50%;
     padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -261,6 +281,24 @@ Media screens between 600px and 900px:
     .navbar .language {
         position: relative;
     }
+    .navbar .language2 {
+        display: none;
+    }
+
+    .navbar .language {
+        color: rgb(255, 217, 0);
+        white-space: nowrap;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        font-size: 20px;
+        list-style: none;
+        align-self: flex-start;
+    }
+    
+    .navbar .language a {
+        color: rgb(255, 217, 0);
+        text-decoration: none;
+    }
 
     .nav-menu {
         display: none;
@@ -268,13 +306,13 @@ Media screens between 600px and 900px:
 
     .navbar .dropdown {
         position: relative;
-        margin-left: auto;
+        margin-right: 30px;
+        
     }
 
     .navbar .drop-menu {
         display: none;
         position: absolute;
-        
     }
 
     .navbar .drop-menu a {
@@ -295,13 +333,13 @@ Media screens between 600px and 900px:
 
     .universalContainer .img1, 
     .reflectionContainer .img1, .reflectionContainer .img3, 
-    .reflectionContainer .img2 , .accessContainer img{
+    .reflectionContainer .img2 {
         width: 80vw;
         height: auto;
         margin: 20px 0px 20px 0px;
     }
 
-    .universalContainer .img2 {
+    .universalContainer .img2 , .accessContainer img{
         width: 50vw;
         height: auto;
     }
