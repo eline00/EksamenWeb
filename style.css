@@ -4,6 +4,7 @@
      box-sizing: border-box; 
 }
 
+/* Makes .viewMore link scroll smoothly. (Does not work in safari). */
 html {
     scroll-behavior: smooth;
 }
@@ -28,28 +29,26 @@ body {
     list-style: none;
 }
 
-.navbar .language2 {
+.navbar .language {
     color: rgb(255, 217, 0);
-    white-space: nowrap;
+    white-space: nowrap; /* Prevents linebreak */
     padding-right: 1rem;
     padding-left: 1rem;
     font-size: 20px;
     list-style: none;
-    align-self: flex-start;
+    align-self: flex-start; /* Aligns language switch higher than the other flex items */ 
     margin-top: -15px;
     margin-right: 5px;
 }
 
-.navbar .language2 a {
+.navbar .language a {
     color: rgb(255, 217, 0);
     text-decoration: none;
 }
 
 .yellowLogo img {
-    
     height: auto;
     padding: 20px;
-    min-width: 150px;
     max-width: 175px;
 }
 
@@ -63,7 +62,6 @@ body {
     width: 350px;
     margin: 30px auto 60px auto;
     padding: 20px;
-    border-width: 2px;
     text-transform: uppercase;
 }
 
@@ -72,10 +70,6 @@ main {
     background-color: rgb(41, 41, 41);
     color: white;
     height: auto;
-}
-
-.accessContainer, .universalContainer, .reflectionContainer {
-    padding: 50px 50px 50px 50px;
 }
 
 main p {
@@ -142,6 +136,7 @@ main a {
 
 main a:hover {
     text-decoration: underline;
+    color: rgba(250, 225, 178, 0.89);
 }
 
 /* 
@@ -166,25 +161,23 @@ HOME PAGE:
     text-align: left;
     font-size: 50px;
     line-height: 1;
-    margin: 0px;
-    white-space: nowrap;
+    margin: 0px;   
 }
 
 .headerHome h2{
     color: rgb(255, 217, 0);
     font-size: 25px;
     text-align: left;
-    white-space: nowrap;
     font-weight: initial;
 }
 
+/* Links that scrolls down on page when clicked */
 .headerHome .links{
     position: absolute;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding-left: 0;
-    margin-top: 20rem;
     left: 6rem;
     list-style: none;
 }
@@ -237,10 +230,10 @@ HOME PAGE:
     margin-top: 50px;
     border-radius: 20px;
     font-size: 25px;
-    width: 450px;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
-    
+    text-align: center;
 }
 
 /* 
@@ -248,6 +241,7 @@ ACCESSIBILITY PAGE:
 --------------------------------------------------------------------------------------
 */
 
+/* Centers images on accessibility page */
 .accessContainer figure {
     width: 50%;
     padding: 10px;
@@ -255,13 +249,25 @@ ACCESSIBILITY PAGE:
     margin-right: auto;
 }
 
+/* 
+REFLECTION, ACCESSIBILITY, AND TECHNOLOGY & SOCIETY PAGE: 
+--------------------------------------------------------------------------------------
+*/
+
+/* Same padding on main for the three different pages */
+.accessContainer, .universalContainer, .reflectionContainer {
+    padding: 50px 50px 50px 50px;
+}
+
 
 /*
-Media screens between 600px and 900px:
+Media screens between below 900px:
  - Putting navbar into hamburger icon menu 
  - Resizes images with smaller screens
 */
 @media only screen and (max-width:900px) { 
+
+    /* Style for the hamburger menu */
     .navbar .dropdown .button {
         background-color: transparent;
         cursor: pointer;
@@ -278,36 +284,14 @@ Media screens between 600px and 900px:
         align-items: center;
     }
 
-    .navbar .language {
-        position: relative;
-    }
-    .navbar .language2 {
-        display: none;
-    }
-
-    .navbar .language {
-        color: rgb(255, 217, 0);
-        white-space: nowrap;
-        padding-right: 1rem;
-        padding-left: 1rem;
-        font-size: 20px;
-        list-style: none;
-        align-self: flex-start;
-    }
-    
-    .navbar .language a {
-        color: rgb(255, 217, 0);
-        text-decoration: none;
-    }
-
     .nav-menu {
         display: none;
     }
 
     .navbar .dropdown {
         position: relative;
-        margin-right: 30px;
-        
+        margin-right: -50px;
+        margin-left: auto;
     }
 
     .navbar .drop-menu {
@@ -326,11 +310,14 @@ Media screens between 600px and 900px:
         background-color: rgba(145, 145, 145, 0.521);
     }
 
+    /* Shows meny in the form of a dropdown meny when hovering 
+    over the hamburger menu */
     .navbar .dropdown:hover .drop-menu {
         display: block;
         background-color: rgba(41, 41, 41, 0.836);
     }
 
+    /* Sizing the images on the different pages */
     .universalContainer .img1, 
     .reflectionContainer .img1, .reflectionContainer .img3, 
     .reflectionContainer .img2 {
@@ -350,10 +337,11 @@ Media screens between 600px and 900px:
 }
 
 /* 
-Media screens bigger than 900px:
- - Shows navbar and hides hamburger menu
+Media screens greater than 901px:
+ - Shows full navigation bar and hides hamburger menu
 */
 @media only screen and (min-width:901px) {
+    /* Hides the dropdownmeny */
     .dropdown {
         display: none;
     }
@@ -392,10 +380,12 @@ Media screens bigger than 900px:
         font-size: 20px;
     }
     
+    /*Makes first list element (home) yellow*/
     .navbar li:first-child a{
-        color: rgb(255, 217, 0); /*Makes first list element (home) yellow*/
+        color: rgb(255, 217, 0);
     } 
 
+    /* Sizing the images on the different pages */
     .reflectionContainer img, .universalContainer .img1, 
     .accessContainer img {
         width: 400px;

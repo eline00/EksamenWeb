@@ -105,31 +105,17 @@ main li {
 main .persPics {
     display: flex;
     justify-content: space-around;
-    padding-left: 10;
+    padding: 0px;
     width: 100%;
-}
-
-main .persPics img {
-    height: auto;
-    min-width: 125px;
-    max-width: 130px;
-    border-radius: 50%;
 }
 
 main .persPics2 {
     display: flex;
     justify-content: space-evenly;
-    padding-left: 10;
     width: 100%;
-
+    padding: 0px;
 }
 
-main .persPics2 img {
-    height: auto;
-    min-height: 125px;
-    max-height: 130px;
-    border-radius: 50%;
-}
 
 
 main .title {
@@ -147,6 +133,11 @@ main .buddylink {
 main .buddylink a {
     color: black;
     text-transform: uppercase;
+}
+
+main h2 {
+    text-transform: uppercase;
+    align-self: flex-start;
 }
 
 main .placeholder {
@@ -256,15 +247,21 @@ footer p {
 
 /* Media screens smaller than 600px */
 @media only screen and (max-width:600px) {
+    main .persPics img, main .persPics2 img {
+        max-width: 70px;
+        border-radius: 50%;
+    }
 }
 
-/* Media screens between 600px and 900px */
-@media only screen and (max-width:900px) and (min-width:600px) { 
+@media only screen and (min-width:601px) {
+    main .persPics img, main .persPics2 img {
+        min-width: 125px;
+        max-width: 130px;
+        border-radius: 50%;
+    }
 }
 
-/* Media screens bigger than 900px */
-@media only screen and (min-width:901px) {
-}
+
 
 
 
