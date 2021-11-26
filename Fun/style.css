@@ -87,15 +87,28 @@ body {
     background-color: rgb(236, 181, 145);
 }
 
+/* Shows meny in the form of a dropdown meny when hovering 
+    over the hamburger menu */
 .navbar .dropdown:hover .drop-menu {
     display: block;
+}
+
+header {
+    text-align: center;
+    margin-top: 300px;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: initial;
+    text-transform: uppercase;
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 300px 30px 10px 45px;
+    margin: 0px 30px 10px 45px;
 }
 
 main li {
@@ -115,8 +128,6 @@ main .persPics2 {
     width: 100%;
     padding: 0px;
 }
-
-
 
 main .title {
     font-size: 30px;
